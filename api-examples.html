@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Runtime API Examples - 皮皮盘搜</title>
+    <meta name="description" content="新一代的云盘导航系统">
+    <meta name="generator" content="VitePress v1.4.3">
+    <link rel="preload stylesheet" href="/assets/style.BIMMW0Nj.css" as="style">
+    
+    <script type="module" src="/assets/app.CImianRE.js"></script>
+    <link rel="preload" href="/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/assets/chunks/theme.aBqjI8Iv.js">
+    <link rel="modulepreload" href="/assets/chunks/framework.BG-FXJvp.js">
+    <link rel="modulepreload" href="/assets/api-examples.md.DI4DEw56.lean.js">
+    <meta name="author" content="Prk">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap">
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+  </head>
+  <body>
+    <div id="app"><div class="Layout" data-v-5ac1a2e5><!--[--><!--]--><!--[--><span tabindex="-1" data-v-0eadaf5a></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-0eadaf5a> Skip to content </a><!--]--><!----><header class="VPNav" data-v-5ac1a2e5 data-v-1cb6e35c><div class="VPNavBar" data-v-1cb6e35c data-v-426739f9><div class="wrapper" data-v-426739f9><div class="container" data-v-426739f9><div class="title" data-v-426739f9><div class="VPNavBarTitle" data-v-426739f9 data-v-5d8266d7><a class="title" href="/" data-v-5d8266d7><!--[--><!--]--><!--[--><!--[--><!--[--><img class="VPImage dark logo" src="/assets/images/logo.png" alt="皮皮盘搜" data-v-b450f107><!--]--><!--[--><img class="VPImage light logo" src="/assets/images/logo.png" alt="皮皮盘搜" data-v-b450f107><!--]--><!--]--><!--]--><span data-v-5d8266d7>皮皮盘搜</span><!--[--><!--]--></a></div></div><div class="content" data-v-426739f9><div class="content-body" data-v-426739f9><!--[--><!--]--><div class="VPNavBarSearch search" data-v-426739f9><!----></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-426739f9 data-v-3b3148db><span id="main-nav-aria-label" class="visually-hidden" data-v-3b3148db> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/" tabindex="0" data-v-3b3148db data-v-fb45cce8><!--[--><span data-v-fb45cce8>🏠&nbsp;首页</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/price.html" tabindex="0" data-v-3b3148db data-v-fb45cce8><!--[--><span data-v-fb45cce8>💰&nbsp;价格</span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-3b3148db data-v-7bf7fbb7><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-7bf7fbb7><span class="text" data-v-7bf7fbb7><!----><span data-v-7bf7fbb7>🎁&nbsp;产品</span><span class="vpi-chevron-down text-icon" data-v-7bf7fbb7></span></span></button><div class="menu" data-v-7bf7fbb7><div class="VPMenu" data-v-7bf7fbb7 data-v-2aaf38d2><div class="items" data-v-2aaf38d2><!--[--><!--[--><div class="VPMenuLink" data-v-2aaf38d2 data-v-8cca6a79><a class="VPLink link" href="/product/" data-v-8cca6a79><!--[--><span data-v-8cca6a79>产品说明</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuGroup" data-v-2aaf38d2 data-v-ad81b731><p class="title" data-v-ad81b731>安装</p><!--[--><!--[--><div class="VPMenuLink" data-v-ad81b731 data-v-8cca6a79><a class="VPLink link" href="/product/install/" data-v-8cca6a79><!--[--><span data-v-8cca6a79>安装前的准备</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-ad81b731 data-v-8cca6a79><a class="VPLink link" href="/product/install/env.html" data-v-8cca6a79><!--[--><span data-v-8cca6a79>环境变量</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-ad81b731 data-v-8cca6a79><a class="VPLink link" href="/product/tree.html" data-v-8cca6a79><!--[--><span data-v-8cca6a79>目录结构</span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--[--><div class="VPMenuGroup" data-v-2aaf38d2 data-v-ad81b731><p class="title" data-v-ad81b731>配置</p><!--[--><!--[--><div class="VPMenuLink" data-v-ad81b731 data-v-8cca6a79><a class="VPLink link" href="/product/config/" data-v-8cca6a79><!--[--><span data-v-8cca6a79>系统设置</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-ad81b731 data-v-8cca6a79><a class="VPLink link" href="/product/config/base.html" data-v-8cca6a79><!--[--><span data-v-8cca6a79>基础信息设置</span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-3b3148db data-v-7bf7fbb7><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-7bf7fbb7><span class="text" data-v-7bf7fbb7><!----><span data-v-7bf7fbb7>🪧&nbsp;广告</span><span class="vpi-chevron-down text-icon" data-v-7bf7fbb7></span></span></button><div class="menu" data-v-7bf7fbb7><div class="VPMenu" data-v-7bf7fbb7 data-v-2aaf38d2><div class="items" data-v-2aaf38d2><!--[--><!--[--><div class="VPMenuLink" data-v-2aaf38d2 data-v-8cca6a79><a class="VPLink link" href="/ad/" data-v-8cca6a79><!--[--><span data-v-8cca6a79>接入广告</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-2aaf38d2 data-v-8cca6a79><a class="VPLink link" href="/ad/html.html" data-v-8cca6a79><!--[--><span data-v-8cca6a79>自定义广告</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuGroup" data-v-2aaf38d2 data-v-ad81b731><p class="title" data-v-ad81b731>联盟广告</p><!--[--><!--[--><div class="VPMenuLink" data-v-ad81b731 data-v-8cca6a79><a class="VPLink link" href="/ad/bytedance.html" data-v-8cca6a79><!--[--><span data-v-8cca6a79>穿山甲（字节跳动）</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-ad81b731 data-v-8cca6a79><a class="VPLink link" href="/ad/pangle.html" data-v-8cca6a79><!--[--><span data-v-8cca6a79>穿山甲国际版</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-ad81b731 data-v-8cca6a79><a class="VPLink link" href="/ad/tencent.html" data-v-8cca6a79><!--[--><span data-v-8cca6a79>腾讯优量汇</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-ad81b731 data-v-8cca6a79><a class="VPLink link" href="/ad/baidu.html" data-v-8cca6a79><!--[--><span data-v-8cca6a79>百度百青藤</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-ad81b731 data-v-8cca6a79><a class="VPLink link" href="/ad/kwai.html" data-v-8cca6a79><!--[--><span data-v-8cca6a79>快手广告联盟</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-ad81b731 data-v-8cca6a79><a class="VPLink link" href="/ad/google.html" data-v-8cca6a79><!--[--><span data-v-8cca6a79>谷歌广告</span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--[--><div class="VPMenuGroup" data-v-2aaf38d2 data-v-ad81b731><p class="title" data-v-ad81b731>聚合广告</p><!--[--><!--[--><div class="VPMenuLink" data-v-ad81b731 data-v-8cca6a79><a class="VPLink link" href="/ad/uni-ad.html" data-v-8cca6a79><!--[--><span data-v-8cca6a79>UniAD</span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/sites.html" tabindex="0" data-v-3b3148db data-v-fb45cce8><!--[--><span data-v-fb45cce8>🌟推荐站点</span><!--]--></a><!--]--><!--[--><a class="VPLink link vp-external-link-icon VPNavBarMenuLink" href="https://www.example.com" target="_blank" rel="noreferrer" tabindex="0" data-v-3b3148db data-v-fb45cce8><!--[--><span data-v-fb45cce8>演示站</span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-3b3148db data-v-7bf7fbb7><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-7bf7fbb7><span class="text" data-v-7bf7fbb7><!----><span data-v-7bf7fbb7>授权</span><span class="vpi-chevron-down text-icon" data-v-7bf7fbb7></span></span></button><div class="menu" data-v-7bf7fbb7><div class="VPMenu" data-v-7bf7fbb7 data-v-2aaf38d2><div class="items" data-v-2aaf38d2><!--[--><!--[--><div class="VPMenuLink" data-v-2aaf38d2 data-v-8cca6a79><a class="VPLink link" href="/auth.html" data-v-8cca6a79><!--[--><span data-v-8cca6a79>授权查询</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-2aaf38d2 data-v-8cca6a79><a class="VPLink link vp-external-link-icon" href="https://www.prkauth.com" target="_blank" rel="noreferrer" data-v-8cca6a79><!--[--><span data-v-8cca6a79>授权管理中心</span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-3b3148db data-v-7bf7fbb7><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-7bf7fbb7><span class="text" data-v-7bf7fbb7><!----><span data-v-7bf7fbb7>关于</span><span class="vpi-chevron-down text-icon" data-v-7bf7fbb7></span></span></button><div class="menu" data-v-7bf7fbb7><div class="VPMenu" data-v-7bf7fbb7 data-v-2aaf38d2><div class="items" data-v-2aaf38d2><!--[--><!--[--><div class="VPMenuLink" data-v-2aaf38d2 data-v-8cca6a79><a class="VPLink link" href="/about/" data-v-8cca6a79><!--[--><span data-v-8cca6a79>关于我们</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-2aaf38d2 data-v-8cca6a79><a class="VPLink link" href="/about/developer.html" data-v-8cca6a79><!--[--><span data-v-8cca6a79>开发人员</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-2aaf38d2 data-v-8cca6a79><a class="VPLink link" href="/about/contact.html" data-v-8cca6a79><!--[--><span data-v-8cca6a79>联系我们</span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-426739f9 data-v-27689ede><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-27689ede data-v-a70f52f8 data-v-d84e7d9b><span class="check" data-v-d84e7d9b><span class="icon" data-v-d84e7d9b><!--[--><span class="vpi-sun sun" data-v-a70f52f8></span><span class="vpi-moon moon" data-v-a70f52f8></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-426739f9 data-v-884ebf5f data-v-48932a38><!--[--><a class="VPSocialLink no-icon" href="https://github.com/vuejs/vitepress" aria-label="github" target="_blank" rel="noopener" data-v-48932a38 data-v-2901b47f><span class="vpi-social-github" /></a><a class="VPSocialLink no-icon" href="https://x.imprk.me" aria-label="x" target="_blank" rel="noopener" data-v-48932a38 data-v-2901b47f><span class="vpi-social-x" /></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-426739f9 data-v-2c13a1fa data-v-7bf7fbb7><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-7bf7fbb7><span class="vpi-more-horizontal icon" data-v-7bf7fbb7></span></button><div class="menu" data-v-7bf7fbb7><div class="VPMenu" data-v-7bf7fbb7 data-v-2aaf38d2><!----><!--[--><!--[--><!----><div class="group" data-v-2c13a1fa><div class="item appearance" data-v-2c13a1fa><p class="label" data-v-2c13a1fa>Appearance</p><div class="appearance-action" data-v-2c13a1fa><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-2c13a1fa data-v-a70f52f8 data-v-d84e7d9b><span class="check" data-v-d84e7d9b><span class="icon" data-v-d84e7d9b><!--[--><span class="vpi-sun sun" data-v-a70f52f8></span><span class="vpi-moon moon" data-v-a70f52f8></span><!--]--></span></span></button></div></div></div><div class="group" data-v-2c13a1fa><div class="item social-links" data-v-2c13a1fa><div class="VPSocialLinks social-links-list" data-v-2c13a1fa data-v-48932a38><!--[--><a class="VPSocialLink no-icon" href="https://github.com/vuejs/vitepress" aria-label="github" target="_blank" rel="noopener" data-v-48932a38 data-v-2901b47f><span class="vpi-social-github" /></a><a class="VPSocialLink no-icon" href="https://x.imprk.me" aria-label="x" target="_blank" rel="noopener" data-v-48932a38 data-v-2901b47f><span class="vpi-social-x" /></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-426739f9 data-v-fc21515e><span class="container" data-v-fc21515e><span class="top" data-v-fc21515e></span><span class="middle" data-v-fc21515e></span><span class="bottom" data-v-fc21515e></span></span></button></div></div></div></div><div class="divider" data-v-426739f9><div class="divider-line" data-v-426739f9></div></div></div><!----></header><div class="VPLocalNav empty fixed" data-v-5ac1a2e5 data-v-4de3971e><div class="container" data-v-4de3971e><!----><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-4de3971e data-v-22ae0053><button data-v-22ae0053>Return to top</button><!----></div></div></div><!----><div class="VPContent" id="VPContent" data-v-5ac1a2e5 data-v-9b1a1c6f><div class="VPDoc has-aside" data-v-9b1a1c6f data-v-f50a3400><!--[--><!--]--><div class="container" data-v-f50a3400><div class="aside" data-v-f50a3400><div class="aside-curtain" data-v-f50a3400></div><div class="aside-container" data-v-f50a3400><div class="aside-content" data-v-f50a3400><div class="VPDocAside" data-v-f50a3400 data-v-23b868ae><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-23b868ae data-v-b07ed8d3><div class="content" data-v-b07ed8d3><div class="outline-marker" data-v-b07ed8d3></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-b07ed8d3>On this page</div><ul class="VPDocOutlineItem root" data-v-b07ed8d3 data-v-437a3860><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-23b868ae></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-f50a3400><div class="content-container" data-v-f50a3400><!--[--><!--]--><main class="main" data-v-f50a3400><div style="position:relative;" class="vp-doc _api-examples" data-v-f50a3400><div><h1 id="runtime-api-examples" tabindex="-1">Runtime API Examples <a class="header-anchor" href="#runtime-api-examples" aria-label="Permalink to &quot;Runtime API Examples&quot;">​</a></h1><p>This page demonstrates usage of some of the runtime APIs provided by VitePress.</p><p>The main <code>useData()</code> API can be used to access site, theme, and page data for the current page. It works in both <code>.md</code> and <code>.vue</code> files:</p><div class="language-md vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">md</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;script setup&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">import { useData } from &#39;vitepress&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">const { theme, page, frontmatter } = useData()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;/script&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">## Results</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### Theme Data</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;pre&gt;{{ theme }}&lt;/pre&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### Page Data</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;pre&gt;{{ page }}&lt;/pre&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### Page Frontmatter</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;pre&gt;{{ frontmatter }}&lt;/pre&gt;</span></span></code></pre></div><h2 id="results" tabindex="-1">Results <a class="header-anchor" href="#results" aria-label="Permalink to &quot;Results&quot;">​</a></h2><h3 id="theme-data" tabindex="-1">Theme Data <a class="header-anchor" href="#theme-data" aria-label="Permalink to &quot;Theme Data&quot;">​</a></h3><pre>{
+  &quot;i18nRouting&quot;: false,
+  &quot;logo&quot;: {
+    &quot;alt&quot;: &quot;皮皮盘搜&quot;,
+    &quot;light&quot;: &quot;/assets/images/logo.png&quot;,
+    &quot;dark&quot;: &quot;/assets/images/logo.png&quot;
+  },
+  &quot;nav&quot;: [
+    {
+      &quot;text&quot;: &quot;🏠&amp;nbsp;首页&quot;,
+      &quot;link&quot;: &quot;/&quot;
+    },
+    {
+      &quot;text&quot;: &quot;💰&amp;nbsp;价格&quot;,
+      &quot;link&quot;: &quot;/price&quot;
+    },
+    {
+      &quot;text&quot;: &quot;🎁&amp;nbsp;产品&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;产品说明&quot;,
+          &quot;link&quot;: &quot;/product/&quot;
+        },
+        {
+          &quot;text&quot;: &quot;安装&quot;,
+          &quot;items&quot;: [
+            {
+              &quot;text&quot;: &quot;安装前的准备&quot;,
+              &quot;link&quot;: &quot;/product/install/&quot;
+            },
+            {
+              &quot;text&quot;: &quot;环境变量&quot;,
+              &quot;link&quot;: &quot;/product/install/env&quot;
+            },
+            {
+              &quot;text&quot;: &quot;目录结构&quot;,
+              &quot;link&quot;: &quot;/product/tree&quot;
+            }
+          ]
+        },
+        {
+          &quot;text&quot;: &quot;配置&quot;,
+          &quot;items&quot;: [
+            {
+              &quot;text&quot;: &quot;系统设置&quot;,
+              &quot;link&quot;: &quot;/product/config/&quot;
+            },
+            {
+              &quot;text&quot;: &quot;基础信息设置&quot;,
+              &quot;link&quot;: &quot;/product/config/base&quot;
+            }
+          ]
+        }
+      ]
+    },
+    {
+      &quot;text&quot;: &quot;🪧&amp;nbsp;广告&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;接入广告&quot;,
+          &quot;link&quot;: &quot;/ad/&quot;
+        },
+        {
+          &quot;text&quot;: &quot;自定义广告&quot;,
+          &quot;link&quot;: &quot;/ad/html&quot;
+        },
+        {
+          &quot;text&quot;: &quot;联盟广告&quot;,
+          &quot;items&quot;: [
+            {
+              &quot;text&quot;: &quot;穿山甲（字节跳动）&quot;,
+              &quot;link&quot;: &quot;/ad/bytedance&quot;
+            },
+            {
+              &quot;text&quot;: &quot;穿山甲国际版&quot;,
+              &quot;link&quot;: &quot;/ad/pangle&quot;
+            },
+            {
+              &quot;text&quot;: &quot;腾讯优量汇&quot;,
+              &quot;link&quot;: &quot;/ad/tencent&quot;
+            },
+            {
+              &quot;text&quot;: &quot;百度百青藤&quot;,
+              &quot;link&quot;: &quot;/ad/baidu&quot;
+            },
+            {
+              &quot;text&quot;: &quot;快手广告联盟&quot;,
+              &quot;link&quot;: &quot;/ad/kwai&quot;
+            },
+            {
+              &quot;text&quot;: &quot;谷歌广告&quot;,
+              &quot;link&quot;: &quot;/ad/google&quot;
+            }
+          ]
+        },
+        {
+          &quot;text&quot;: &quot;聚合广告&quot;,
+          &quot;items&quot;: [
+            {
+              &quot;text&quot;: &quot;UniAD&quot;,
+              &quot;link&quot;: &quot;/ad/uni-ad&quot;
+            }
+          ]
+        }
+      ]
+    },
+    {
+      &quot;text&quot;: &quot;🌟推荐站点&quot;,
+      &quot;link&quot;: &quot;/sites&quot;
+    },
+    {
+      &quot;text&quot;: &quot;演示站&quot;,
+      &quot;link&quot;: &quot;https://www.example.com&quot;
+    },
+    {
+      &quot;text&quot;: &quot;授权&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;授权查询&quot;,
+          &quot;link&quot;: &quot;/auth&quot;
+        },
+        {
+          &quot;text&quot;: &quot;授权管理中心&quot;,
+          &quot;link&quot;: &quot;https://www.prkauth.com&quot;
+        }
+      ]
+    },
+    {
+      &quot;text&quot;: &quot;关于&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;关于我们&quot;,
+          &quot;link&quot;: &quot;/about/&quot;
+        },
+        {
+          &quot;text&quot;: &quot;开发人员&quot;,
+          &quot;link&quot;: &quot;/about/developer&quot;
+        },
+        {
+          &quot;text&quot;: &quot;联系我们&quot;,
+          &quot;link&quot;: &quot;/about/contact&quot;
+        }
+      ]
+    }
+  ],
+  &quot;sidebar&quot;: {
+    &quot;product&quot;: [
+      {
+        &quot;text&quot;: &quot;产品说明&quot;,
+        &quot;link&quot;: &quot;/product/&quot;
+      },
+      {
+        &quot;text&quot;: &quot;安装&quot;,
+        &quot;items&quot;: [
+          {
+            &quot;text&quot;: &quot;安装前的准备&quot;,
+            &quot;link&quot;: &quot;/product/install/&quot;
+          },
+          {
+            &quot;text&quot;: &quot;环境变量&quot;,
+            &quot;link&quot;: &quot;/product/install/env&quot;
+          },
+          {
+            &quot;text&quot;: &quot;目录结构&quot;,
+            &quot;link&quot;: &quot;/product/tree&quot;
+          }
+        ]
+      },
+      {
+        &quot;text&quot;: &quot;配置&quot;,
+        &quot;items&quot;: [
+          {
+            &quot;text&quot;: &quot;系统设置&quot;,
+            &quot;link&quot;: &quot;/product/config/&quot;
+          },
+          {
+            &quot;text&quot;: &quot;基础信息设置&quot;,
+            &quot;link&quot;: &quot;/product/config/base&quot;
+          }
+        ]
+      }
+    ],
+    &quot;ad&quot;: [
+      {
+        &quot;text&quot;: &quot;接入广告&quot;,
+        &quot;link&quot;: &quot;/ad/&quot;
+      },
+      {
+        &quot;text&quot;: &quot;自定义广告&quot;,
+        &quot;link&quot;: &quot;/ad/html&quot;
+      },
+      {
+        &quot;text&quot;: &quot;联盟广告&quot;,
+        &quot;items&quot;: [
+          {
+            &quot;text&quot;: &quot;穿山甲（字节跳动）&quot;,
+            &quot;link&quot;: &quot;/ad/bytedance&quot;
+          },
+          {
+            &quot;text&quot;: &quot;穿山甲国际版&quot;,
+            &quot;link&quot;: &quot;/ad/pangle&quot;
+          },
+          {
+            &quot;text&quot;: &quot;腾讯优量汇&quot;,
+            &quot;link&quot;: &quot;/ad/tencent&quot;
+          },
+          {
+            &quot;text&quot;: &quot;百度百青藤&quot;,
+            &quot;link&quot;: &quot;/ad/baidu&quot;
+          },
+          {
+            &quot;text&quot;: &quot;快手广告联盟&quot;,
+            &quot;link&quot;: &quot;/ad/kwai&quot;
+          },
+          {
+            &quot;text&quot;: &quot;谷歌广告&quot;,
+            &quot;link&quot;: &quot;/ad/google&quot;
+          }
+        ]
+      },
+      {
+        &quot;text&quot;: &quot;聚合广告&quot;,
+        &quot;items&quot;: [
+          {
+            &quot;text&quot;: &quot;UniAD&quot;,
+            &quot;link&quot;: &quot;/ad/uni-ad&quot;
+          }
+        ]
+      }
+    ],
+    &quot;about&quot;: [
+      {
+        &quot;text&quot;: &quot;关于我们&quot;,
+        &quot;items&quot;: [
+          {
+            &quot;text&quot;: &quot;关于我们&quot;,
+            &quot;link&quot;: &quot;/about/&quot;
+          },
+          {
+            &quot;text&quot;: &quot;开发人员&quot;,
+            &quot;link&quot;: &quot;/about/developer&quot;
+          },
+          {
+            &quot;text&quot;: &quot;联系我们&quot;,
+            &quot;link&quot;: &quot;/about/contact&quot;
+          }
+        ]
+      }
+    ]
+  },
+  &quot;socialLinks&quot;: [
+    {
+      &quot;icon&quot;: &quot;github&quot;,
+      &quot;link&quot;: &quot;https://github.com/vuejs/vitepress&quot;
+    },
+    {
+      &quot;icon&quot;: &quot;x&quot;,
+      &quot;link&quot;: &quot;https://x.imprk.me&quot;
+    }
+  ],
+  &quot;footer&quot;: {
+    &quot;message&quot;: &quot;由&amp;nbsp;Prk&amp;nbsp;开发与制作&quot;,
+    &quot;copyright&quot;: &quot;Copyright&amp;nbsp;&amp;copy;&amp;nbsp;2024-present&amp;nbsp;Prk&amp;nbsp;All&amp;nbsp;rights&amp;nbsp;reserved.&quot;
+  }
+}</pre><h3 id="page-data" tabindex="-1">Page Data <a class="header-anchor" href="#page-data" aria-label="Permalink to &quot;Page Data&quot;">​</a></h3><pre>{
+  &quot;title&quot;: &quot;Runtime API Examples&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;frontmatter&quot;: {
+    &quot;outline&quot;: &quot;deep&quot;
+  },
+  &quot;headers&quot;: [],
+  &quot;relativePath&quot;: &quot;api-examples.md&quot;,
+  &quot;filePath&quot;: &quot;api-examples.md&quot;,
+  &quot;lastUpdated&quot;: null
+}</pre><h3 id="page-frontmatter" tabindex="-1">Page Frontmatter <a class="header-anchor" href="#page-frontmatter" aria-label="Permalink to &quot;Page Frontmatter&quot;">​</a></h3><pre>{
+  &quot;outline&quot;: &quot;deep&quot;
+}</pre><h2 id="more" tabindex="-1">More <a class="header-anchor" href="#more" aria-label="Permalink to &quot;More&quot;">​</a></h2><p>Check out the documentation for the <a href="https://vitepress.dev/reference/runtime-api#usedata" target="_blank" rel="noreferrer">full list of runtime APIs</a>.</p></div></div></main><footer class="VPDocFooter" data-v-f50a3400 data-v-374d7273><!--[--><!--]--><!----><!----></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><footer class="VPFooter" data-v-5ac1a2e5 data-v-716ebf41><div class="container" data-v-716ebf41><p class="message" data-v-716ebf41>由&nbsp;Prk&nbsp;开发与制作</p><p class="copyright" data-v-716ebf41>Copyright&nbsp;&copy;&nbsp;2024-present&nbsp;Prk&nbsp;All&nbsp;rights&nbsp;reserved.</p></div></footer><!--[--><!--]--></div></div>
+    <script>window.__VP_HASH_MAP__=JSON.parse("{\"about_contact.md\":\"D1QhV8HD\",\"about_developer.md\":\"GCBwcGg2\",\"about_index.md\":\"CIxLZXQx\",\"ad_baidu.md\":\"7j7-U3gd\",\"ad_bytedance.md\":\"K3vXV7yZ\",\"ad_google.md\":\"CmkdcNxq\",\"ad_html.md\":\"DFskd5cD\",\"ad_index.md\":\"CBFlDy0C\",\"ad_kwai.md\":\"_u_vK4hg\",\"ad_pangle.md\":\"DvSapARt\",\"ad_tencent.md\":\"CnQ54xpQ\",\"ad_uni-ad.md\":\"C4FQXox2\",\"api-examples.md\":\"DI4DEw56\",\"auth.md\":\"BdA8cWy1\",\"index.md\":\"CO_Ev79C\",\"markdown-examples.md\":\"C_Nh_CtG\",\"price.md\":\"Dz_cMpFe\",\"product_config_base.md\":\"QtRRHhi0\",\"product_config_index.md\":\"D7BCS9H8\",\"product_index.md\":\"CbUSqoUU\",\"product_install_env.md\":\"Cy8HLb7w\",\"product_install_index.md\":\"CIFc9sKP\",\"product_tree.md\":\"xObpN2Gv\",\"sites.md\":\"C7b9pj3k\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"zh-CN\",\"dir\":\"ltr\",\"title\":\"皮皮盘搜\",\"titleTemplate\":\":title - 皮皮盘搜\",\"description\":\"新一代的云盘导航系统\",\"base\":\"/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":true,\"themeConfig\":{\"i18nRouting\":false,\"logo\":{\"alt\":\"皮皮盘搜\",\"light\":\"/assets/images/logo.png\",\"dark\":\"/assets/images/logo.png\"},\"nav\":[{\"text\":\"🏠&nbsp;首页\",\"link\":\"/\"},{\"text\":\"💰&nbsp;价格\",\"link\":\"/price\"},{\"text\":\"🎁&nbsp;产品\",\"items\":[{\"text\":\"产品说明\",\"link\":\"/product/\"},{\"text\":\"安装\",\"items\":[{\"text\":\"安装前的准备\",\"link\":\"/product/install/\"},{\"text\":\"环境变量\",\"link\":\"/product/install/env\"},{\"text\":\"目录结构\",\"link\":\"/product/tree\"}]},{\"text\":\"配置\",\"items\":[{\"text\":\"系统设置\",\"link\":\"/product/config/\"},{\"text\":\"基础信息设置\",\"link\":\"/product/config/base\"}]}]},{\"text\":\"🪧&nbsp;广告\",\"items\":[{\"text\":\"接入广告\",\"link\":\"/ad/\"},{\"text\":\"自定义广告\",\"link\":\"/ad/html\"},{\"text\":\"联盟广告\",\"items\":[{\"text\":\"穿山甲（字节跳动）\",\"link\":\"/ad/bytedance\"},{\"text\":\"穿山甲国际版\",\"link\":\"/ad/pangle\"},{\"text\":\"腾讯优量汇\",\"link\":\"/ad/tencent\"},{\"text\":\"百度百青藤\",\"link\":\"/ad/baidu\"},{\"text\":\"快手广告联盟\",\"link\":\"/ad/kwai\"},{\"text\":\"谷歌广告\",\"link\":\"/ad/google\"}]},{\"text\":\"聚合广告\",\"items\":[{\"text\":\"UniAD\",\"link\":\"/ad/uni-ad\"}]}]},{\"text\":\"🌟推荐站点\",\"link\":\"/sites\"},{\"text\":\"演示站\",\"link\":\"https://www.example.com\"},{\"text\":\"授权\",\"items\":[{\"text\":\"授权查询\",\"link\":\"/auth\"},{\"text\":\"授权管理中心\",\"link\":\"https://www.prkauth.com\"}]},{\"text\":\"关于\",\"items\":[{\"text\":\"关于我们\",\"link\":\"/about/\"},{\"text\":\"开发人员\",\"link\":\"/about/developer\"},{\"text\":\"联系我们\",\"link\":\"/about/contact\"}]}],\"sidebar\":{\"product\":[{\"text\":\"产品说明\",\"link\":\"/product/\"},{\"text\":\"安装\",\"items\":[{\"text\":\"安装前的准备\",\"link\":\"/product/install/\"},{\"text\":\"环境变量\",\"link\":\"/product/install/env\"},{\"text\":\"目录结构\",\"link\":\"/product/tree\"}]},{\"text\":\"配置\",\"items\":[{\"text\":\"系统设置\",\"link\":\"/product/config/\"},{\"text\":\"基础信息设置\",\"link\":\"/product/config/base\"}]}],\"ad\":[{\"text\":\"接入广告\",\"link\":\"/ad/\"},{\"text\":\"自定义广告\",\"link\":\"/ad/html\"},{\"text\":\"联盟广告\",\"items\":[{\"text\":\"穿山甲（字节跳动）\",\"link\":\"/ad/bytedance\"},{\"text\":\"穿山甲国际版\",\"link\":\"/ad/pangle\"},{\"text\":\"腾讯优量汇\",\"link\":\"/ad/tencent\"},{\"text\":\"百度百青藤\",\"link\":\"/ad/baidu\"},{\"text\":\"快手广告联盟\",\"link\":\"/ad/kwai\"},{\"text\":\"谷歌广告\",\"link\":\"/ad/google\"}]},{\"text\":\"聚合广告\",\"items\":[{\"text\":\"UniAD\",\"link\":\"/ad/uni-ad\"}]}],\"about\":[{\"text\":\"关于我们\",\"items\":[{\"text\":\"关于我们\",\"link\":\"/about/\"},{\"text\":\"开发人员\",\"link\":\"/about/developer\"},{\"text\":\"联系我们\",\"link\":\"/about/contact\"}]}]},\"socialLinks\":[{\"icon\":\"github\",\"link\":\"https://github.com/vuejs/vitepress\"},{\"icon\":\"x\",\"link\":\"https://x.imprk.me\"}],\"footer\":{\"message\":\"由&nbsp;Prk&nbsp;开发与制作\",\"copyright\":\"Copyright&nbsp;&copy;&nbsp;2024-present&nbsp;Prk&nbsp;All&nbsp;rights&nbsp;reserved.\"}},\"locales\":{},\"scrollOffset\":134,\"cleanUrls\":false}");</script>
+    
+  </body>
+</html>
